@@ -72,13 +72,11 @@ ggplot(data = sep_sched)+
     mapping = aes(x = Dials))+
   labs(y = "Leads")
 
-
 #Plot the data for all of July by the number of dials
 ggplot(data = july)+
   geom_bar(
-    mapping = aes(x = Dials, fill = Lead.Status),
-    position = "dodge")+
-  labs(y = "Leads")
+    mapping = aes(x = Dials, fill = Lead.Status))+
+  labs(title = "July 2017 Leads by # of Dials and Status",x = "# of Dials", y = "Leads")
 
 #Plot the dials for the leads that were contacted
 ggplot(data = jul_contact)+
